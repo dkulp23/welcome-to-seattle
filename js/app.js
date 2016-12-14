@@ -91,7 +91,7 @@ Neighborhood.fetchAll = function() {
       Neighborhood.loadAll(neighborhoodData);
       Neighborhood.renderAll(neighborhoodData);
     } else {
-      $.getJSON('data/neighborhoodData.json', function(data) {
+      $.getJSON('../data/neighborhoodData.json', function(data) {
         localStorage.setItem('neighborhoodData', JSON.stringify(data));
         var neighborhoodData = JSON.parse(localStorage.getItem('neighborhoodData'));
         Portfolio.loadAll(neighborhoodData);
